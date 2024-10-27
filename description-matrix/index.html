@@ -10,66 +10,72 @@
 </head>
 
 <body>
-  <h1>Description-Based User Interaction Matrix</h1>
-
-  <div>
-    <h3>
-      <a href="/">&#8592; back?</a>
-    </h3>
+  <div class="sidebar">
+    <img src="/twitter-sidebar.png" alt="Twitter sidebar" width="150">
   </div>
 
-  <table>
-    <thead>
+  <div class="content">
+    <h1>Description-Based User Interactions Matrix</h1>
+
+    <div>
+      <h3>
+        <a href="/">&#8592; back?</a>
+      </h3>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <span>
+              <pre class="username"><a href="https://x.com/contextdogs/">@contextdogs</a></pre> should...
+            </span>
+          </th>
+          <th>
+            <span>
+              Yes/No
+            </span>
+          </th>
+        </tr>
+      </thead>
       <tr>
-        <th>
+        <td>
           <span>
-            <pre class="username"><a href="https://x.com/contextdogs/">@contextdogs</a></pre> should...
+            appear on my feed
           </span>
-        </th>
-        <th>
-          <span>
-            Yes/No
-          </span>
-        </th>
+        </td>
+        <td>
+          <div>
+            <input type="checkbox" />
+          </div>
+        </td>
       </tr>
-    </thead>
-    <tr>
-      <td>
-        <span>
-          appear on my feed
-        </span>
-      </td>
-      <td>
-        <div>
-          <input type="checkbox" />
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span>
-          can direct message me
-        </span>
-      </td>
-      <td>
-        <div>
-          <input type="checkbox" />
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span>
-          see the content I post, repost, like, and my comments
-        </span>
-      </td>
-      <td>
-        <div>
-          <input type="checkbox" checked />
-        </div>
-      </td>
-    </tr>
-  </table>
+      <tr>
+        <td>
+          <span>
+            can direct message me
+          </span>
+        </td>
+        <td>
+          <div>
+            <input type="checkbox" />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            see the content I post, repost, like, and my comments
+          </span>
+        </td>
+        <td>
+          <div>
+            <input type="checkbox" checked />
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
 </body>
 
 </html>
