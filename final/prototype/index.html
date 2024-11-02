@@ -1,55 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>X - HCI Final Prototype</title>
+    <link rel="shortcut icon" href="//abs.twimg.com/favicons/twitter.3.ico" />
+    <link rel="stylesheet" href="/final-styles.css" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>X - HCI Final Prototype</title>
-  <link rel="shortcut icon" href="//abs.twimg.com/favicons/twitter.3.ico">
-  <link rel="stylesheet" href="/final-styles.css">
-</head>
+    <script src="/final.js"></script>
+  </head>
 
-<body class="page-container">
-  <div class="sidebar">
-    <img src="/final-twitter-sidebar.png" alt="Twitter sidebar" width="100">
-  </div>
-
-  <div class="content">
-    <div class="header">
-      <a class="back-link" href="/">&#8592;</a>
-      <h1>Social Settings</h1>
+  <body class="page-container">
+    <div class="sidebar">
+      <img src="/final-twitter-sidebar.png" alt="Twitter sidebar" width="100" />
     </div>
 
-    <div class="header-description">
-      <span>
-        Manage how you interact with <pre class="username"><a href="https://x.com/contextdogs/">@contextdogs</a></pre>
-      </span>
-    </div> 
+    <div class="content">
+      <div class="header">
+        <a class="back-link" href="/">&#8592;</a>
+        <h1>Social Settings</h1>
+      </div>
 
-    <div class="feature-list">
-      <div class="feature">
-        <div>
-          <span>Follow?</span>
-          <input type="checkbox" checked />
-        </div>
-        <p class="feature-description">Posts, likes, comments, and reposts will appear on your feed with a higher priority and regularity.</p>
+      <div class="header-description">
+        <span>
+          Manage how you interact with
+          <pre
+            class="username"
+          ><a href="https://x.com/contextdogs/">@contextdogs</a></pre>
+        </span>
       </div>
-      <div class="feature">
-        <div>
-          <span>Mute?</span>
-          <input type="checkbox" />
+
+      <div class="feature-list">
+        <div class="feature">
+          <div>
+            <span>Follow?</span>
+            <input id="follow-input" type="checkbox" checked />
+          </div>
+          <p class="feature-description">
+            Posts, likes, comments, and reposts will appear on your feed with a
+            higher priority and regularity.
+          </p>
         </div>
-        <p class="feature-description">Posts, likes, comments, and reposts will not appear on your feed or come through notifications.</p>
+        <div class="feature">
+          <div>
+            <span>Mute?</span>
+            <input id="mute-input" type="checkbox" />
+          </div>
+          <p class="feature-description">
+            Posts, likes, comments, and reposts will not appear on your feed or
+            come through notifications.
+          </p>
+        </div>
+        <div class="feature">
+          <div>
+            <span>Block?</span>
+            <input id="block-input" type="checkbox" />
+          </div>
+          <p class="feature-description">
+            Blocked users can no longer directly interact with any of your
+            content, whether it be liking, commenting, or reposting. Soon,
+            blocked users will be able to view your public posts regardless.
+          </p>
+        </div>
       </div>
-      <div class="feature">
-        <div>
-          <span>Block?</span>
-          <input type="checkbox" />
-        </div>
-        <p class="feature-description">Blocked users can no longer directly interact with any of your content, whether it be liking, commenting, or reposting. Soon, blocked users will be able to view your public posts regardless.</p>
+
+      <div class="feature-summary">
+        <table>
+          <caption>
+            Summary
+          </caption>
+          <thead>
+            <th></th>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="summary-text"></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>

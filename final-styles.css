@@ -137,6 +137,10 @@ table {
   border: 2px solid var(--border-color);
 }
 
+caption {
+  float: left;
+}
+
 th {
   text-align: left;
 }
