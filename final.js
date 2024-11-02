@@ -9,32 +9,39 @@ function drawSummary() {
     const isMuted = document.getElementById("mute-input").checked;
     const isBlocked = document.getElementById("block-input").checked;
 
-    let summary = [];
+    let you = [];
+    let them = [];
     if (isFollowing) {
-        summary.push("following");
+        you.push("can direct message them");
+        you.push("will see their posts more frequently");
+        them.push("can direct message me")
     } else {
-
+        you.push("have access to direct messaging");
+        them.push("have access to direct messaging");
     }
     if (isMuted) {
-        summary.push("muted");
+        you.push("will not see their activity on your feed");
+        them.push("will not appear on your feed");
     } else {
 
     }
     if (isBlocked) {
-        summary.push("blocked");
+        // summary.push("blocked");
     } else {
 
     }
 
-    let summaryText = '';
-    if (summary.length > 2) {
-        summaryText = summary.slice(0, summary.length - 1).join(', ') + `, and ${summary[summary.length - 1]}`;
-    } else {
-        summaryText = summary.join(' and ');
-    }
-    summaryText = capitalize(summaryText);
+    for (const [pro, proId] of [[you, "you-text"], [them, "them-text"]]) {
+        let summaryText = '';
+        if (pro.length > 2) {
+            summaryText = pro.slice(0, pro.length - 1).join(', ') + `, and ${pro[pro.length - 1]}`;
+        } else {
+            summaryText = pro.join(' and ');
+        }
+        summaryText = capitalize(summaryText);
 
-    const summaryNode = document.getElementById("summary-text").innerHTML = summaryText;
+        summaryNode = document.getElementById(proId).innerHTML = summaryText;
+    }
 }
 
 document.onreadystatechange = (event) => {

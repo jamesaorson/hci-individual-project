@@ -195,6 +195,13 @@ tbody > tr > td {
   margin-top: 0.2rem;
 }
 
+.feature-summary > div > table {
+  width: 60vw;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .back-link {
   margin-right: 2rem;
   text-decoration: none;
