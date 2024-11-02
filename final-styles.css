@@ -119,6 +119,10 @@ h1 {
   display: inline;
 }
 
+h2 {
+  font-size: 18px;
+}
+
 .feature input[type="checkbox"] {
   float: right;
   margin-right: 1.5rem;
@@ -193,6 +197,7 @@ tbody > tr > td {
   color: var(--text-secondary-color);
   font-size: 13px;
   margin-top: 0.2rem;
+  padding-left: 0.75rem;
 }
 
 .feature-summary > div > table {
